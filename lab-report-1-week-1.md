@@ -53,5 +53,8 @@ You could easily swap the directory and file name to customize it to your own si
 ###### *Apple really doesn't like people making runnable applications*
 This can be done by navigating to the directory of the .command file in the terminal, and running chmod +x [FILE NAME]. Afterwards, the file will run every time you double click it. Below is a demonstration:
 
+https://user-images.githubusercontent.com/114254189/193159844-110ac92d-be95-477e-9d2b-63c506130592.mp4
+
+
 ### **Conclusion**
 Connecting to a remote server or computer is an extremely valuable skill to learn. By being able to share files and sign in without a password, as well as using commands, the process becomes easy and intutitive.

@@ -56,9 +56,12 @@ class Handler implements URLHandler {
 }
 ~~~
 
-This site allows one to easily upload new strings and query the strings that are contained. Here is an example upload command and server response:
+This site allows one to easily upload new strings and query the strings that are contained. Here is an example upload command and server response: 
 
-![Image](Screen_Shot_Lab2_1.png)
+
+![Image](Screen_Shot_Lab2_1.png) 
+
+
 
 This calls **HandleRequest** method of the Handler, which takes as its argument the path of the entered url, matches the **add** term to its intended behavior, and updates the **contents** ArrayList by adding the terms of the url following the "?". In this case, contents would begin as [], but end as [apple, blueberry].
 
@@ -100,18 +103,27 @@ Detecting this bug was contingent on the test adding list2's final term last. If
 
 ## LinkedList
 
-The second bug I was most proud of catching took place in the **first()** method of the sample LinkedList class. Originally, this method was simply:
+The second bug I was most proud of catching took place in the **first()** method of the sample LinkedList class. Originally, this method was simply: 
 
-![Image](Screen_Shot_Lab2_10.png)
 
-However, I noticed an interesting feature of this implementation that led me to believe this method was flawed. The antithesis of this first() method is the last() method, which returned the final term in the list. But first, last() made sure that there was any term at all, and if not threw an *ElementNotFoundException*. To test my theory that first() was missing a crucial exception check, I wrote a test method:
 
-![Image](Screen_Shot_Lab2_9.png)
+![Image](Screen_Shot_Lab2_10.png) 
 
-By instantiating an empty list and calling both first() and last() with the same expected output, I could check whether they were bugged to not behave the same. Sure enough, last() produced the expected exception, while first() produced the following:
 
-![Image](Screen_Shot_Lab2_8.png)
 
-Because it wasn't told to check if there was a missing element, the program just saw that it was trying to retrieve a null value and broke. With this in hand, I added a clause to first() to cover this case using the same methodology as last().
+However, I noticed an interesting feature of this implementation that led me to believe this method was flawed. The antithesis of this first() method is the last() method, which returned the final term in the list. But first, last() made sure that there was any term at all, and if not threw an *ElementNotFoundException*. To test my theory that first() was missing a crucial exception check, I wrote a test method: 
+
+
+![Image](Screen_Shot_Lab2_9.png) 
+
+
+By instantiating an empty list and calling both first() and last() with the same expected output, I could check whether they were bugged to not behave the same. Sure enough, last() produced the expected exception, while first() produced the following: 
+
+
+![Image](Screen_Shot_Lab2_8.png) 
+
+
+Because it wasn't told to check if there was a missing element, the program just saw that it was trying to retrieve a null value and broke. With this in hand, I added a clause to first() to cover this case using the same methodology as last(). 
+
 
 ![Image](Screen_Shot_Lab2_11.png)

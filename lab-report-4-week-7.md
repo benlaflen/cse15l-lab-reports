@@ -54,7 +54,16 @@ In this part, we were supposed to compare how quickly we're able to execute and 
 ###### Although I realized afterwards that I SCP-ed the wrong directory. Regardless, the time would have been the same since I prepped the command beforehand.
 My vim run was actually going pretty well until 0:20 when \<esc> failed to take me out of search mode (most likely shell difference). It's anyone's guess whether it would have been faster even so. This highlights the reason I would generally rather use a text editor like VS Code than work remotely: I can always make a shell script to automate the repetitive commands, but version differences on the remote computer could be highly prohibitive. Now, if the files I was working with were large enough that they would take extremely long times to scp, there's no faster way to get them onto the server, and the changes are fairly routine, I'd definitely consider vim. But I've been trained with a mouse, and it's probably not efficient overall to switch that.
 
+##### *Vim*
+
+
+https://user-images.githubusercontent.com/114254189/201500730-247eafd6-1679-4fb9-b188-82fa66d026b8.mp4
+
+
+
 ##### *VS Code*
 
 
-##### *Vim*
+https://user-images.githubusercontent.com/114254189/201500751-87f2778a-b3f5-4880-bf29-c42dc049fffa.mp4
+
+

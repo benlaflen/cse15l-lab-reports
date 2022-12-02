@@ -8,44 +8,51 @@ Our first task is to simplify a task to the fewest keystrokes possible using vim
 I got the problem down to a miniscule 27 keystrokes, out of which almost all are just moving around. The initial file appears as such:
 ![Image](Screen_Shot_Lab4_1.png)
 We then execute our first 6 keystrokes:
-- 25j
-- V
-- 5j
+```
+25j
+V
+5j
+```
 
 The first command brings us to the beginning of the method we're copying, V enters Visual Line mode, and 5j selects the entire method. This results in the following:
 ![Image](Screen_Shot_Lab4_2.png)
 We now spend another 7 keystrokes to get the new method in place and reposition the cursor:
-- y
-- k
-- p
-- j
-- 27l
-
+```
+y
+k
+p
+j
+27l
+```
 y yanks the selected code (essentially copying it). We then reposition the cursor and paste with p, before returning to the proper line where we need to make our first change.
 ![Image](Screen_Shot_Lab4_3.png)
 Now we execute another 7 keystrokes:
-- i2
-- \<esc>
-- /xa
-- \<enter>
-
+```
+i2
+<esc>
+/xa
+<enter>
+```
  i2 enters Insert Mode and adds a 2 to our method name, which we then need to exit with escape. /xa searches the document for "xa", which there is conventiently only one instance of. Enter takes us to this location.
 ![Image](Screen_Shot_Lab4_4.png)
 
 To change "taxation" to "tax", we only need 3 keystrokes:
-
-- l
-- dw
-
+```
+l
+dw
+```
 l moves forward one character, positioning us perfectly for dw, which deletes the rest of the word.
 ![Image](Screen_Shot_Lab4_5.png)
 
 All that's left is 4 keystrokes:
-- \<esc>
-- :wq
-
+```
+<esc>
+:wq
+```
 which leaves search mode and then saves and quits. In total, this sums to 27 keystrokes, beating our 30 keystroke limit. This also looks like:
-###### 25jV5jykpj27li2\<esc>/xa\<enter>ldw\<esc>:wq
+```
+25jV5jykpj27li2\<esc>/xa\<enter>ldw\<esc>:wq
+```
 which looks more like AES-256 than editing instructions, but it works.
 
 ## **Part 2**
